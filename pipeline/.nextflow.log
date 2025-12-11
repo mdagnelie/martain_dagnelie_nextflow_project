@@ -1,0 +1,102 @@
+Dec-11 23:28:59.791 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf --n_samples 2
+Dec-11 23:29:00.061 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.04.8
+Dec-11 23:29:00.101 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/user/brussel/111/vsc11170/.nextflow/plugins; core-plugins: nf-amazon@2.15.0-patch2,nf-azure@1.16.0-patch1,nf-cloudcache@0.4.3,nf-codecommit@0.2.3,nf-console@1.2.1,nf-google@1.21.1,nf-k8s@1.0.1,nf-tower@1.11.4-patch2,nf-wave@1.12.1
+Dec-11 23:29:00.158 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Dec-11 23:29:00.163 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Dec-11 23:29:00.167 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Dec-11 23:29:00.190 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Dec-11 23:29:00.221 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/nextflow.config
+Dec-11 23:29:00.224 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/nextflow.config
+Dec-11 23:29:00.258 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /user/brussel/111/vsc11170/.nextflow/secrets/store.json
+Dec-11 23:29:00.263 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@71391b3f] - activable => nextflow.secret.LocalSecretsProvider@71391b3f
+Dec-11 23:29:00.282 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Dec-11 23:29:00.823 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 by global default
+Dec-11 23:29:00.844 [main] DEBUG nextflow.cli.CmdRun - Launching `main.nf` [elegant_easley] DSL2 - revision: 234d8bac61
+Dec-11 23:29:00.846 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Dec-11 23:29:00.848 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Dec-11 23:29:00.914 [main] DEBUG nextflow.Session - Session UUID: b6811fd3-e006-479c-873e-d01becd95ebf
+Dec-11 23:29:00.915 [main] DEBUG nextflow.Session - Run name: elegant_easley
+Dec-11 23:29:00.919 [main] DEBUG nextflow.Session - Executor pool size: 8
+Dec-11 23:29:00.932 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Dec-11 23:29:00.938 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Dec-11 23:29:00.961 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 25.04.8 build 5956
+  Created: 06-10-2025 21:19 UTC (23:19 CEST)
+  System: Linux 5.14.0-570.42.2.el9_6.x86_64
+  Runtime: Groovy 4.0.26 on OpenJDK 64-Bit Server VM 23.0.2+7
+  Encoding: UTF-8 (UTF-8)
+  Process: 643801@node4009.donphan.os [10.141.6.138]
+  CPUs: 8 - Mem: 754 GB (695.3 GB) - Swap: 20 GB (20 GB)
+Dec-11 23:29:01.139 [main] DEBUG nextflow.Session - Work-dir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work [nfs]
+Dec-11 23:29:01.182 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Dec-11 23:29:01.192 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Dec-11 23:29:01.198 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Dec-11 23:29:01.233 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Dec-11 23:29:01.243 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 9; maxThreads: 1000
+Dec-11 23:29:01.530 [main] DEBUG nextflow.Session - Session start
+Dec-11 23:29:01.789 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Dec-11 23:29:02.328 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-11 23:29:02.329 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-11 23:29:02.340 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Dec-11 23:29:02.348 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=8; memory=754 GB; capacity=8; pollInterval=100ms; dumpInterval=5m
+Dec-11 23:29:02.351 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Dec-11 23:29:02.379 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'CSVTK_CONCAT': maxForks=0; fair=false; array=0
+Dec-11 23:29:02.414 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:low` matches labels `low` for process with name GENERATE_GUESS
+Dec-11 23:29:02.416 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-11 23:29:02.419 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-11 23:29:02.423 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'GENERATE_GUESS': maxForks=0; fair=false; array=0
+Dec-11 23:29:02.434 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:high` matches labels `high` for process with name SIMULATION_FIT
+Dec-11 23:29:02.436 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-11 23:29:02.438 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-11 23:29:02.443 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'SIMULATION_FIT': maxForks=0; fair=false; array=0
+Dec-11 23:29:02.470 [main] WARN  nextflow.extension.OperatorImpl - The operator `first` is useless when applied to a value channel which returns a single value by definition -- check channel `dataset_ch`
+Dec-11 23:29:02.477 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:low` matches labels `low` for process with name SELECT_BEST
+Dec-11 23:29:02.478 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-11 23:29:02.481 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-11 23:29:02.485 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'SELECT_BEST': maxForks=0; fair=false; array=0
+Dec-11 23:29:02.491 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: SELECT_BEST, GENERATE_GUESS, CSVTK_CONCAT, SIMULATION_FIT
+Dec-11 23:29:02.494 [main] DEBUG nextflow.Session - Igniting dataflow network (5)
+Dec-11 23:29:02.502 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > CSVTK_CONCAT
+Dec-11 23:29:02.503 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > GENERATE_GUESS
+Dec-11 23:29:02.504 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/data/; pattern: *.csv; options: [:]
+Dec-11 23:29:02.507 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > SIMULATION_FIT
+Dec-11 23:29:02.511 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > SELECT_BEST
+Dec-11 23:29:02.511 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_8273371ea1711698: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/main.nf
+  Script_4607d157003f2f30: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/modules/generate_guess.nf
+  Script_fedf3a4eed2a1a7d: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/modules/select_best.nf
+  Script_a167abd3271a4007: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/modules/simulation_fit.nf
+  Script_687a4344fecc0eb7: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/modules/nf-core/csvtk/concat/main.nf
+Dec-11 23:29:02.515 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Dec-11 23:29:02.519 [main] DEBUG nextflow.Session - Session await
+Dec-11 23:29:02.573 [Actor Thread 6] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=docker://mdagnelie/parameter_estimation:v0.1; path=/scratch/gent/vo/000/gvo00016/vsc11170/.apptainer_cache/mdagnelie-parameter_estimation-v0.1.img
+Dec-11 23:29:02.574 [Actor Thread 6] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=https://depot.galaxyproject.org/singularity/csvtk:0.31.0--h9ee0642_0; path=/scratch/gent/vo/000/gvo00016/vsc11170/.apptainer_cache/depot.galaxyproject.org-singularity-csvtk-0.31.0--h9ee0642_0.img
+Dec-11 23:29:02.718 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:29:02.720 [Task submitter] INFO  nextflow.Session - [f1/5f04a0] Submitted process > CSVTK_CONCAT (all_timeseries)
+Dec-11 23:29:02.783 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:29:02.783 [Task submitter] INFO  nextflow.Session - [8f/039d29] Submitted process > GENERATE_GUESS (generate_guess)
+Dec-11 23:29:03.366 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: CSVTK_CONCAT (all_timeseries); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/f1/5f04a007275f95b684304a170a7f13]
+Dec-11 23:29:03.366 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Dec-11 23:29:04.753 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: GENERATE_GUESS (generate_guess); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/8f/039d2911143769862aef4637b47910]
+Dec-11 23:29:04.857 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:29:04.858 [Task submitter] INFO  nextflow.Session - [20/0136e7] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:29:06.611 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/20/0136e7d77f596f1b663edcec615620]
+Dec-11 23:29:06.654 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:29:06.655 [Task submitter] INFO  nextflow.Session - [d1/4dc471] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:29:08.373 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/d1/4dc471720a868eb05d64df771c497b]
+Dec-11 23:29:08.410 [Actor Thread 8] DEBUG nextflow.sort.BigSort - Sort completed -- entries: 2; slices: 1; internal sort time: 0.012 s; external sort time: 0.002 s; total time: 0.014 s
+Dec-11 23:29:08.454 [Actor Thread 8] DEBUG nextflow.file.FileCollector - Saved collect-files list to: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/collect-file/3e99f201dc04b4b4763956ae05db9c5c
+Dec-11 23:29:08.461 [Actor Thread 8] DEBUG nextflow.file.FileCollector - Deleting file collector temp dir: /tmp/nxf-1505714820620083955
+Dec-11 23:29:08.526 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:29:08.527 [Task submitter] INFO  nextflow.Session - [4b/912cd9] Submitted process > SELECT_BEST (best_parameters)
+Dec-11 23:29:11.819 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: SELECT_BEST (best_parameters); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/4b/912cd9046f223abbd175f2723b8838]
+Dec-11 23:29:11.840 [TaskFinalizer-5] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'PublishDir' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Dec-11 23:29:11.843 [main] DEBUG nextflow.Session - Session await > all processes finished
+Dec-11 23:29:11.920 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Dec-11 23:29:11.920 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Dec-11 23:29:11.928 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'TaskFinalizer' shutdown completed (hard=false)
+Dec-11 23:29:11.996 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'PublishDir' shutdown completed (hard=false)
+Dec-11 23:29:12.004 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=5; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=32.3s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=2; peakCpus=8; peakMemory=8 GB; ]
+Dec-11 23:29:12.049 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Dec-11 23:29:12.134 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+Dec-11 23:29:12.155 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

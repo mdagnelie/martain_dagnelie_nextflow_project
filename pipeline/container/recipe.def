@@ -1,0 +1,35 @@
+BootStrap: docker
+From: python:3.11-slim
+
+%labels
+    Author MartainDagnelie
+    Version 1.0
+    Description "Python environment with numpy, scipy for parameter estimation"
+
+%files
+    requirements.txt /requirements.txt
+%environment
+    # Set PATH for Python and pip
+    export PATH=/usr/local/bin:$PATH
+    export PYTHONUNBUFFERED=1
+
+%post
+    # Update package lists and install dependencies
+    apt-get update && apt-get install -y --no-install-recommends \
+        build-essential \
+        git \
+        wget \
+        curl \
+        ca-certificates \
+        && rm -rf /var/lib/apt/lists/*
+
+    # Upgrade pip
+    python -m pip install --upgrade pip
+
+    # Install Python libraries
+    pip install --no-cache-dir -r /requirements.txt
+
+%runscript
+    # Default command when running the container
+    exec /bin/bash "$@"
+

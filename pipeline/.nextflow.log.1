@@ -1,0 +1,396 @@
+Dec-11 23:24:52.045 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf --params.n_samples 20
+Dec-11 23:24:52.244 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.04.8
+Dec-11 23:24:52.266 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/user/brussel/111/vsc11170/.nextflow/plugins; core-plugins: nf-amazon@2.15.0-patch2,nf-azure@1.16.0-patch1,nf-cloudcache@0.4.3,nf-codecommit@0.2.3,nf-console@1.2.1,nf-google@1.21.1,nf-k8s@1.0.1,nf-tower@1.11.4-patch2,nf-wave@1.12.1
+Dec-11 23:24:52.344 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Dec-11 23:24:52.349 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Dec-11 23:24:52.354 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Dec-11 23:24:52.375 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Dec-11 23:24:52.403 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/nextflow.config
+Dec-11 23:24:52.405 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/nextflow.config
+Dec-11 23:24:52.435 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /user/brussel/111/vsc11170/.nextflow/secrets/store.json
+Dec-11 23:24:52.438 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@c446b14] - activable => nextflow.secret.LocalSecretsProvider@c446b14
+Dec-11 23:24:52.454 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Dec-11 23:24:52.971 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 by global default
+Dec-11 23:24:52.991 [main] DEBUG nextflow.cli.CmdRun - Launching `main.nf` [gloomy_volhard] DSL2 - revision: 234d8bac61
+Dec-11 23:24:52.993 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Dec-11 23:24:52.995 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Dec-11 23:24:53.061 [main] DEBUG nextflow.Session - Session UUID: d97fe08a-dafa-43df-9822-2305cf7b5744
+Dec-11 23:24:53.062 [main] DEBUG nextflow.Session - Run name: gloomy_volhard
+Dec-11 23:24:53.065 [main] DEBUG nextflow.Session - Executor pool size: 8
+Dec-11 23:24:53.077 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Dec-11 23:24:53.082 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Dec-11 23:24:53.104 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 25.04.8 build 5956
+  Created: 06-10-2025 21:19 UTC (23:19 CEST)
+  System: Linux 5.14.0-570.42.2.el9_6.x86_64
+  Runtime: Groovy 4.0.26 on OpenJDK 64-Bit Server VM 23.0.2+7
+  Encoding: UTF-8 (UTF-8)
+  Process: 630961@node4009.donphan.os [10.141.6.138]
+  CPUs: 8 - Mem: 754 GB (695.3 GB) - Swap: 20 GB (20 GB)
+Dec-11 23:24:53.286 [main] DEBUG nextflow.Session - Work-dir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work [nfs]
+Dec-11 23:24:53.329 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Dec-11 23:24:53.337 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Dec-11 23:24:53.342 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Dec-11 23:24:53.376 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Dec-11 23:24:53.385 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 9; maxThreads: 1000
+Dec-11 23:24:53.710 [main] DEBUG nextflow.Session - Session start
+Dec-11 23:24:53.962 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Dec-11 23:24:54.444 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-11 23:24:54.444 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-11 23:24:54.455 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Dec-11 23:24:54.462 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=8; memory=754 GB; capacity=8; pollInterval=100ms; dumpInterval=5m
+Dec-11 23:24:54.464 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Dec-11 23:24:54.491 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'CSVTK_CONCAT': maxForks=0; fair=false; array=0
+Dec-11 23:24:54.525 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:low` matches labels `low` for process with name GENERATE_GUESS
+Dec-11 23:24:54.527 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-11 23:24:54.529 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-11 23:24:54.535 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'GENERATE_GUESS': maxForks=0; fair=false; array=0
+Dec-11 23:24:54.548 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:high` matches labels `high` for process with name SIMULATION_FIT
+Dec-11 23:24:54.549 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-11 23:24:54.552 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-11 23:24:54.557 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'SIMULATION_FIT': maxForks=0; fair=false; array=0
+Dec-11 23:24:54.592 [main] WARN  nextflow.extension.OperatorImpl - The operator `first` is useless when applied to a value channel which returns a single value by definition -- check channel `dataset_ch`
+Dec-11 23:24:54.598 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:low` matches labels `low` for process with name SELECT_BEST
+Dec-11 23:24:54.599 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-11 23:24:54.602 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-11 23:24:54.607 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'SELECT_BEST': maxForks=0; fair=false; array=0
+Dec-11 23:24:54.612 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: SELECT_BEST, GENERATE_GUESS, CSVTK_CONCAT, SIMULATION_FIT
+Dec-11 23:24:54.615 [main] DEBUG nextflow.Session - Igniting dataflow network (5)
+Dec-11 23:24:54.623 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > CSVTK_CONCAT
+Dec-11 23:24:54.623 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > GENERATE_GUESS
+Dec-11 23:24:54.624 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/data/; pattern: *.csv; options: [:]
+Dec-11 23:24:54.627 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > SIMULATION_FIT
+Dec-11 23:24:54.631 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > SELECT_BEST
+Dec-11 23:24:54.635 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_8273371ea1711698: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/main.nf
+  Script_4607d157003f2f30: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/modules/generate_guess.nf
+  Script_fedf3a4eed2a1a7d: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/modules/select_best.nf
+  Script_a167abd3271a4007: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/modules/simulation_fit.nf
+  Script_687a4344fecc0eb7: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/modules/nf-core/csvtk/concat/main.nf
+Dec-11 23:24:54.638 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Dec-11 23:24:54.642 [main] DEBUG nextflow.Session - Session await
+Dec-11 23:24:54.688 [Actor Thread 6] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=docker://mdagnelie/parameter_estimation:v0.1; path=/scratch/gent/vo/000/gvo00016/vsc11170/.apptainer_cache/mdagnelie-parameter_estimation-v0.1.img
+Dec-11 23:24:54.693 [Actor Thread 6] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=https://depot.galaxyproject.org/singularity/csvtk:0.31.0--h9ee0642_0; path=/scratch/gent/vo/000/gvo00016/vsc11170/.apptainer_cache/depot.galaxyproject.org-singularity-csvtk-0.31.0--h9ee0642_0.img
+Dec-11 23:24:54.837 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:24:54.838 [Task submitter] INFO  nextflow.Session - [b2/ebec28] Submitted process > CSVTK_CONCAT (all_timeseries)
+Dec-11 23:24:54.879 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:24:54.880 [Task submitter] INFO  nextflow.Session - [47/e10cd7] Submitted process > GENERATE_GUESS (generate_guess)
+Dec-11 23:24:55.477 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: CSVTK_CONCAT (all_timeseries); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/b2/ebec28f2def3aa79174bf3c767023f]
+Dec-11 23:24:55.478 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Dec-11 23:24:58.608 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: GENERATE_GUESS (generate_guess); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/47/e10cd706ce37f8f8e057fd495ced85]
+Dec-11 23:24:58.748 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:24:58.748 [Task submitter] INFO  nextflow.Session - [92/8fa892] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:25:00.576 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 8; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/92/8fa8929a5a80205b77dd2445650374]
+Dec-11 23:25:00.624 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:25:00.624 [Task submitter] INFO  nextflow.Session - [5f/e2ece8] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:25:02.420 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/5f/e2ece84a05212446285fcbc1a492b7]
+Dec-11 23:25:02.466 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:25:02.467 [Task submitter] INFO  nextflow.Session - [2a/30f7b4] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:25:04.204 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/2a/30f7b4d1427556210c7cab1b4b6d12]
+Dec-11 23:25:04.267 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:25:04.268 [Task submitter] INFO  nextflow.Session - [67/d99ed0] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:25:06.048 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/67/d99ed0fa180d275ec4f65301eb4cda]
+Dec-11 23:25:06.086 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:25:06.086 [Task submitter] INFO  nextflow.Session - [08/993902] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:25:07.797 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 10; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/08/99390211a0a4018bbae2f33587cdf7]
+Dec-11 23:25:07.939 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:25:07.939 [Task submitter] INFO  nextflow.Session - [08/2d5b42] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:25:09.716 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 9; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/08/2d5b4222fe74d4989e19383d8eb403]
+Dec-11 23:25:09.751 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:25:09.751 [Task submitter] INFO  nextflow.Session - [0b/d1e8cc] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:25:11.554 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 7; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/0b/d1e8cc350c449a865717338f7007b9]
+Dec-11 23:25:11.589 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:25:11.590 [Task submitter] INFO  nextflow.Session - [7a/439a08] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:25:13.380 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/7a/439a08cdc81c926aa421f3ccdaaa4f]
+Dec-11 23:25:13.416 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:25:13.416 [Task submitter] INFO  nextflow.Session - [08/280dae] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:25:15.185 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 12; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/08/280daebd0c93efe3d129f66b422e85]
+Dec-11 23:25:15.220 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:25:15.220 [Task submitter] INFO  nextflow.Session - [06/23c070] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:25:16.993 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 16; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/06/23c070566365a31ceac8a603d18a5c]
+Dec-11 23:25:17.029 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:25:17.029 [Task submitter] INFO  nextflow.Session - [f6/a57415] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:25:18.870 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 17; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/f6/a57415f055ab9700a95ce40033588e]
+Dec-11 23:25:18.903 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:25:18.904 [Task submitter] INFO  nextflow.Session - [3d/2d51a1] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:25:21.090 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 11; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/3d/2d51a16c103ff13f680902de73f81e]
+Dec-11 23:25:21.124 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:25:21.124 [Task submitter] INFO  nextflow.Session - [f6/0f73dd] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:25:22.949 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 15; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/f6/0f73dddd8f8390cbe8f4ca7672f96b]
+Dec-11 23:25:22.985 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:25:22.985 [Task submitter] INFO  nextflow.Session - [14/a9f5eb] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:25:24.773 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 14; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/14/a9f5ebdffb265da0b46e54c8e8b821]
+Dec-11 23:25:24.806 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:25:24.807 [Task submitter] INFO  nextflow.Session - [2c/7006be] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:25:26.596 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 13; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/2c/7006be340f7e543b33f8dd002a7d1f]
+Dec-11 23:25:26.630 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:25:26.630 [Task submitter] INFO  nextflow.Session - [2f/f183cb] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:25:28.436 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 18; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/2f/f183cbda53d99bbf7ff0a859feb6d8]
+Dec-11 23:25:28.470 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:25:28.470 [Task submitter] INFO  nextflow.Session - [c2/d6c88c] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:25:30.241 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 21; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/c2/d6c88cbab6a39646d588840347e3ba]
+Dec-11 23:25:30.275 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:25:30.275 [Task submitter] INFO  nextflow.Session - [e4/94f31a] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:25:32.062 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 19; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/e4/94f31a14b00fe78c03c56f71a7ea24]
+Dec-11 23:25:32.096 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:25:32.096 [Task submitter] INFO  nextflow.Session - [b4/cf31c1] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:25:33.935 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 23; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/b4/cf31c15f567a9fb6b303d5ae985d40]
+Dec-11 23:25:33.971 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:25:33.972 [Task submitter] INFO  nextflow.Session - [84/094944] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:25:35.689 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 24; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/84/094944d82e65cfa88e1234d6962ee5]
+Dec-11 23:25:35.723 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:25:35.723 [Task submitter] INFO  nextflow.Session - [7e/f3996a] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:25:37.561 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 22; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/7e/f3996a6f951253a1db64f54d1ef1ab]
+Dec-11 23:25:37.595 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:25:37.595 [Task submitter] INFO  nextflow.Session - [9e/0c7cfb] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:25:39.386 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 20; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/9e/0c7cfb25d8e3fe8ec4610b33aa94bf]
+Dec-11 23:25:39.421 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:25:39.421 [Task submitter] INFO  nextflow.Session - [18/6f0f61] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:25:41.208 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 26; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/18/6f0f6134c054560c8d98414e5b415d]
+Dec-11 23:25:41.242 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:25:41.242 [Task submitter] INFO  nextflow.Session - [be/375aaf] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:25:43.070 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 25; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/be/375aaf8841e1bc89582c525949d883]
+Dec-11 23:25:43.104 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:25:43.104 [Task submitter] INFO  nextflow.Session - [ef/44f790] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:25:44.940 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 30; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/ef/44f790047de4ffb6f49ea53772d802]
+Dec-11 23:25:44.972 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:25:44.973 [Task submitter] INFO  nextflow.Session - [c7/33f74b] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:25:46.931 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 28; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/c7/33f74bdd796b414060b7a9452f3611]
+Dec-11 23:25:46.965 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:25:46.965 [Task submitter] INFO  nextflow.Session - [1e/217039] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:25:48.805 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 29; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/1e/217039dba7e7e6f19c72de51eb709c]
+Dec-11 23:25:48.838 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:25:48.839 [Task submitter] INFO  nextflow.Session - [01/573ef5] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:25:50.614 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 31; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/01/573ef504d3dfc7ef2502ae4452ba7f]
+Dec-11 23:25:50.648 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:25:50.648 [Task submitter] INFO  nextflow.Session - [51/7c78e4] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:25:52.474 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 27; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/51/7c78e40d9cd27953019cfb7eceb95d]
+Dec-11 23:25:52.511 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:25:52.512 [Task submitter] INFO  nextflow.Session - [4a/7c9aff] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:25:54.350 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 33; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/4a/7c9afffcc7f618038783752874f845]
+Dec-11 23:25:54.386 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:25:54.386 [Task submitter] INFO  nextflow.Session - [aa/6fc4b0] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:25:56.151 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 35; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/aa/6fc4b0b1dbc88fbdebf6dc5423aa85]
+Dec-11 23:25:56.185 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:25:56.185 [Task submitter] INFO  nextflow.Session - [f8/66c067] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:25:58.002 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 34; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/f8/66c067ee72ad71f6c5596a40fa93bd]
+Dec-11 23:25:58.039 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:25:58.040 [Task submitter] INFO  nextflow.Session - [bb/173fd0] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:25:59.919 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 32; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/bb/173fd09e6caa030b736401604b7f11]
+Dec-11 23:25:59.956 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:25:59.956 [Task submitter] INFO  nextflow.Session - [41/97bbe6] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:26:01.782 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 36; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/41/97bbe683ad51c55baba2456d1f8dab]
+Dec-11 23:26:01.819 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:26:01.819 [Task submitter] INFO  nextflow.Session - [b2/aeabc7] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:26:03.597 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 43; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/b2/aeabc77923800b134af023fb0796c8]
+Dec-11 23:26:03.640 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:26:03.640 [Task submitter] INFO  nextflow.Session - [72/a67b0c] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:26:05.455 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 38; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/72/a67b0c63544281870a7906101e91c8]
+Dec-11 23:26:05.491 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:26:05.491 [Task submitter] INFO  nextflow.Session - [5f/c4fa58] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:26:07.257 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 39; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/5f/c4fa58f062d03b2e5786bc583dc705]
+Dec-11 23:26:07.292 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:26:07.292 [Task submitter] INFO  nextflow.Session - [62/5a90c2] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:26:09.056 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 37; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/62/5a90c28d79a8d449b08e8ceeac2fc0]
+Dec-11 23:26:09.093 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:26:09.093 [Task submitter] INFO  nextflow.Session - [fa/d6471e] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:26:10.883 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 42; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/fa/d6471ee28eae406acd929dda41c408]
+Dec-11 23:26:10.917 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:26:10.918 [Task submitter] INFO  nextflow.Session - [e5/e86380] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:26:13.361 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 40; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/e5/e863800c0cd86740f9fc599092ff59]
+Dec-11 23:26:13.397 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:26:13.397 [Task submitter] INFO  nextflow.Session - [21/5c51c1] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:26:15.144 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 41; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/21/5c51c13e3a76d8c2ee1709873fa0a7]
+Dec-11 23:26:15.176 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:26:15.177 [Task submitter] INFO  nextflow.Session - [7a/e50670] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:26:16.902 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 46; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/7a/e506702830febf75e79919dc94f67c]
+Dec-11 23:26:16.939 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:26:16.939 [Task submitter] INFO  nextflow.Session - [67/b1fde4] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:26:18.670 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 49; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/67/b1fde4ed6b3fe9c5fa18278f61fc38]
+Dec-11 23:26:18.704 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:26:18.704 [Task submitter] INFO  nextflow.Session - [24/cf1f8c] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:26:20.462 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 45; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/24/cf1f8cbf40c54ce983dc7490800dea]
+Dec-11 23:26:20.495 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:26:20.495 [Task submitter] INFO  nextflow.Session - [0f/130db3] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:26:22.263 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 44; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/0f/130db3bf16c2a20f986fb27ae39c44]
+Dec-11 23:26:22.297 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:26:22.297 [Task submitter] INFO  nextflow.Session - [d4/d32790] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:26:24.180 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 47; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/d4/d32790cd2eda29640b11b1db22a587]
+Dec-11 23:26:24.214 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:26:24.214 [Task submitter] INFO  nextflow.Session - [44/90ee81] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:26:25.969 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 48; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/44/90ee8138bd60bdbaa0bd5ff2719d82]
+Dec-11 23:26:26.002 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:26:26.002 [Task submitter] INFO  nextflow.Session - [3e/385f8e] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:26:27.778 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 50; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/3e/385f8ec1e397f2cb72f0c7ea5e6b19]
+Dec-11 23:26:27.817 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:26:27.817 [Task submitter] INFO  nextflow.Session - [45/4c1fa9] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:26:29.592 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 51; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/45/4c1fa95dfbdafad720cf486dee9494]
+Dec-11 23:26:29.624 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:26:29.624 [Task submitter] INFO  nextflow.Session - [38/02d342] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:26:31.351 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 52; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/38/02d3422ee49dda72f7ad13cd131cb2]
+Dec-11 23:26:31.392 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:26:31.393 [Task submitter] INFO  nextflow.Session - [56/b54da0] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:26:33.237 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 53; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/56/b54da01add73598cbe4ef2d592514c]
+Dec-11 23:26:33.271 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:26:33.271 [Task submitter] INFO  nextflow.Session - [ee/d9123d] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:26:35.027 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 54; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/ee/d9123dd8a344c95fa2c54bf4144fce]
+Dec-11 23:26:35.063 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:26:35.063 [Task submitter] INFO  nextflow.Session - [ee/1a8b24] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:26:36.906 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 55; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/ee/1a8b2481177ef9f52a923a2b306d97]
+Dec-11 23:26:36.937 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:26:36.938 [Task submitter] INFO  nextflow.Session - [31/aed297] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:26:38.749 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 56; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/31/aed297b3ba724ea646840c253c0be5]
+Dec-11 23:26:38.783 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:26:38.783 [Task submitter] INFO  nextflow.Session - [5c/2c31ee] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:26:40.478 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 57; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/5c/2c31eef5ba90238d0bfaba91d03333]
+Dec-11 23:26:40.511 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:26:40.511 [Task submitter] INFO  nextflow.Session - [53/a7ddd4] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:26:42.286 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 58; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/53/a7ddd459295e6f54f3992cd59fe644]
+Dec-11 23:26:42.317 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:26:42.317 [Task submitter] INFO  nextflow.Session - [aa/8842c1] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:26:44.094 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 61; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/aa/8842c135695317e6aba6506700dacb]
+Dec-11 23:26:44.126 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:26:44.126 [Task submitter] INFO  nextflow.Session - [45/046c11] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:26:45.916 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 63; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/45/046c11bc7857ce95564e02fe1793cb]
+Dec-11 23:26:45.949 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:26:45.949 [Task submitter] INFO  nextflow.Session - [35/bf5ccf] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:26:47.702 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 60; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/35/bf5ccf70556857176812bf065012c6]
+Dec-11 23:26:47.734 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:26:47.734 [Task submitter] INFO  nextflow.Session - [6f/324ef2] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:26:49.495 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 59; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/6f/324ef224f42756d98e5317e0b6aa20]
+Dec-11 23:26:49.528 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:26:49.528 [Task submitter] INFO  nextflow.Session - [70/fa5920] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:26:51.292 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 62; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/70/fa5920ffc56c2923ad1a4de63fbe5d]
+Dec-11 23:26:51.328 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:26:51.328 [Task submitter] INFO  nextflow.Session - [9d/020ba2] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:26:53.231 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 65; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/9d/020ba2d6746167a14f3c99cb7fd984]
+Dec-11 23:26:53.265 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:26:53.265 [Task submitter] INFO  nextflow.Session - [0c/963fab] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:26:55.112 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 64; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/0c/963fab84fab7faee19e1a5d3b348c6]
+Dec-11 23:26:55.145 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:26:55.145 [Task submitter] INFO  nextflow.Session - [0c/6c93c9] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:26:56.911 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 68; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/0c/6c93c9d5e063c7ab35c15eb0a9c7c7]
+Dec-11 23:26:56.944 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:26:56.944 [Task submitter] INFO  nextflow.Session - [7f/6fb1aa] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:26:58.799 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 66; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/7f/6fb1aafbe635a5b511dc9a6af94f49]
+Dec-11 23:26:58.833 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:26:58.833 [Task submitter] INFO  nextflow.Session - [00/c7c15a] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:27:00.619 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 67; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/00/c7c15a62dcc108be36253e9a2bea00]
+Dec-11 23:27:00.657 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:27:00.657 [Task submitter] INFO  nextflow.Session - [19/f9115b] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:27:02.449 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 70; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/19/f9115bb522e9db1cdce9713e49b159]
+Dec-11 23:27:02.485 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:27:02.485 [Task submitter] INFO  nextflow.Session - [02/10d950] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:27:04.330 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 69; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/02/10d950f9b0aa31b0056adc321835cd]
+Dec-11 23:27:04.363 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:27:04.363 [Task submitter] INFO  nextflow.Session - [84/efc977] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:27:06.333 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 73; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/84/efc9770df2180e305f017270407d37]
+Dec-11 23:27:06.367 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:27:06.367 [Task submitter] INFO  nextflow.Session - [c7/f79fef] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:27:08.129 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 75; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/c7/f79fef07a3d6f02ef3417c342ba71b]
+Dec-11 23:27:08.164 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:27:08.164 [Task submitter] INFO  nextflow.Session - [15/14cf56] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:27:09.982 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 71; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/15/14cf56b9b0aac1bd05c79bc92cb2dd]
+Dec-11 23:27:10.017 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:27:10.017 [Task submitter] INFO  nextflow.Session - [10/4e5b05] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:27:11.770 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 72; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/10/4e5b05a9e65d32e60b462c0b1c96cf]
+Dec-11 23:27:11.803 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:27:11.804 [Task submitter] INFO  nextflow.Session - [67/251408] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:27:13.573 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 77; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/67/251408e2dfc8c4f03acf35a50d40be]
+Dec-11 23:27:13.607 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:27:13.607 [Task submitter] INFO  nextflow.Session - [a2/223da7] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:27:15.428 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 76; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/a2/223da71ab43e8a2628f54817648a71]
+Dec-11 23:27:15.465 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:27:15.465 [Task submitter] INFO  nextflow.Session - [32/742d2f] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:27:17.260 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 74; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/32/742d2f57b2ca75b65d0d60dd76d682]
+Dec-11 23:27:17.292 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:27:17.292 [Task submitter] INFO  nextflow.Session - [f6/9c2e34] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:27:19.049 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 78; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/f6/9c2e340598d3ae241c1a4c89a0a563]
+Dec-11 23:27:19.081 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:27:19.082 [Task submitter] INFO  nextflow.Session - [97/e504ea] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:27:20.955 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 80; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/97/e504ea98bcba766b79d6819e4e33b7]
+Dec-11 23:27:20.989 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:27:20.989 [Task submitter] INFO  nextflow.Session - [00/e0fc81] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:27:22.771 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 81; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/00/e0fc8192c6e09845b303ae8abc385e]
+Dec-11 23:27:22.804 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:27:22.805 [Task submitter] INFO  nextflow.Session - [0b/0f9db0] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:27:24.555 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 86; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/0b/0f9db0f5c6e3a5c0d6920b53795655]
+Dec-11 23:27:24.590 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:27:24.590 [Task submitter] INFO  nextflow.Session - [e4/ef4382] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:27:26.327 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 84; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/e4/ef43824738cb2dd85ba2d0f679493a]
+Dec-11 23:27:26.360 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:27:26.360 [Task submitter] INFO  nextflow.Session - [26/11a98e] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:27:28.119 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 82; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/26/11a98ee37b17562f73126dbafd529c]
+Dec-11 23:27:28.152 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:27:28.152 [Task submitter] INFO  nextflow.Session - [0a/bcc80a] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:27:29.929 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 83; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/0a/bcc80a926106c7daa3bb9f313fd512]
+Dec-11 23:27:29.965 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:27:29.965 [Task submitter] INFO  nextflow.Session - [8b/423648] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:27:31.840 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 79; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/8b/423648ec6d82c6bd7bd4265c2199f8]
+Dec-11 23:27:31.871 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:27:31.872 [Task submitter] INFO  nextflow.Session - [0d/6a1f3b] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:27:33.655 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 85; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/0d/6a1f3b51edaf88d503ac5fa3af7981]
+Dec-11 23:27:33.692 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:27:33.692 [Task submitter] INFO  nextflow.Session - [be/57d685] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:27:35.435 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 93; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/be/57d68583601a97ef1becb0930cb017]
+Dec-11 23:27:35.468 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:27:35.469 [Task submitter] INFO  nextflow.Session - [0d/f8094b] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:27:37.322 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 88; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/0d/f8094b49dbd167197f169f57607fc1]
+Dec-11 23:27:37.354 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:27:37.354 [Task submitter] INFO  nextflow.Session - [1c/197f63] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:27:39.093 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 87; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/1c/197f6318b25c19f40ef2b39290d4d6]
+Dec-11 23:27:39.131 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:27:39.131 [Task submitter] INFO  nextflow.Session - [28/1910d4] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:27:40.892 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 92; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/28/1910d44aed7e4b57032736b434baea]
+Dec-11 23:27:40.932 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:27:40.932 [Task submitter] INFO  nextflow.Session - [1d/4c4389] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:27:42.635 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 89; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/1d/4c43896fe61b477b0bc62d73605c11]
+Dec-11 23:27:42.669 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:27:42.670 [Task submitter] INFO  nextflow.Session - [af/02aca1] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:27:44.527 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 90; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/af/02aca16e8fc047f12d9e6fd6d048e6]
+Dec-11 23:27:44.559 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:27:44.559 [Task submitter] INFO  nextflow.Session - [5b/bb9157] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:27:46.335 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 91; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/5b/bb91574ccc21d3ecc35f915dba5080]
+Dec-11 23:27:46.367 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:27:46.368 [Task submitter] INFO  nextflow.Session - [5d/4d82a2] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:27:48.119 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 94; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/5d/4d82a2725887a8f3b978f10067b03d]
+Dec-11 23:27:48.167 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:27:48.167 [Task submitter] INFO  nextflow.Session - [19/d66e59] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:27:49.926 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 95; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/19/d66e59d0ac3646735af0e7c1029425]
+Dec-11 23:27:49.959 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:27:49.959 [Task submitter] INFO  nextflow.Session - [55/64b6b8] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:27:51.845 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 99; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/55/64b6b82c1272badde408c4563361e9]
+Dec-11 23:27:51.879 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:27:51.879 [Task submitter] INFO  nextflow.Session - [ed/8a80d6] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:27:53.703 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 96; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/ed/8a80d6db97dc120f0c189b44385560]
+Dec-11 23:27:53.737 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:27:53.737 [Task submitter] INFO  nextflow.Session - [3c/669701] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:27:55.500 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 100; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/3c/669701dab4b66d3ef7ffe911a4a81c]
+Dec-11 23:27:55.534 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:27:55.534 [Task submitter] INFO  nextflow.Session - [2e/bd2913] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:27:57.341 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 98; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/2e/bd29131148a4b21ae975e34fa3272f]
+Dec-11 23:27:57.374 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:27:57.374 [Task submitter] INFO  nextflow.Session - [cf/cfb783] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:27:59.640 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 97; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/cf/cfb7836a2e1cd57701a0d099dcc33c]
+Dec-11 23:27:59.674 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:27:59.675 [Task submitter] INFO  nextflow.Session - [c5/8cbac2] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:28:01.461 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 101; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/c5/8cbac2ebd011629294abf5b0bc21ce]
+Dec-11 23:28:01.512 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:28:01.512 [Task submitter] INFO  nextflow.Session - [fe/933938] Submitted process > SIMULATION_FIT (likelihood)
+Dec-11 23:28:03.256 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 102; name: SIMULATION_FIT (likelihood); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/fe/9339389c6b1bf2092c9aea499a8ebb]
+Dec-11 23:28:03.643 [Actor Thread 7] DEBUG nextflow.sort.BigSort - Sort completed -- entries: 100; slices: 1; internal sort time: 0.056 s; external sort time: 0.006 s; total time: 0.062 s
+Dec-11 23:28:04.382 [Actor Thread 7] DEBUG nextflow.file.FileCollector - Saved collect-files list to: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/collect-file/92e5746e8851d3ef986a6f9fbab18242
+Dec-11 23:28:04.389 [Actor Thread 7] DEBUG nextflow.file.FileCollector - Deleting file collector temp dir: /tmp/nxf-17185367167192613204
+Dec-11 23:28:04.446 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-11 23:28:04.446 [Task submitter] INFO  nextflow.Session - [e5/d612f4] Submitted process > SELECT_BEST (best_parameters)
+Dec-11 23:28:07.757 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 103; name: SELECT_BEST (best_parameters); status: COMPLETED; exit: 0; error: -; workDir: /vscmnt/brussel_cerberus_data/_data_brussel/111/vsc11170/nextlfow_project_parameter_estimation/pipeline/work/e5/d612f499006c8f9d22b2578e4793c4]
+Dec-11 23:28:07.782 [TaskFinalizer-3] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'PublishDir' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Dec-11 23:28:07.785 [main] DEBUG nextflow.Session - Session await > all processes finished
+Dec-11 23:28:07.856 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Dec-11 23:28:07.857 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Dec-11 23:28:07.863 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'TaskFinalizer' shutdown completed (hard=false)
+Dec-11 23:28:07.864 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'PublishDir' shutdown completed (hard=false)
+Dec-11 23:28:07.874 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=103; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=23m 23s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=2; peakCpus=8; peakMemory=8 GB; ]
+Dec-11 23:28:08.008 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Dec-11 23:28:08.091 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+Dec-11 23:28:08.092 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
