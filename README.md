@@ -48,7 +48,13 @@ They are expected to be from the same experiment. The first Process merge them a
 ```
 
 ## Workflow
+the input are the number of samples, which is used to generate the random parameter samples (guess), as well as the date time-series in csv format. They are concatenated together in one unified csv format. 
 
+The data and the parameter samples are then used to simulate the dynamical model and compute the likelihood. 
+
+At the end, the best parameter sample is selected and key plots are created as output to this pipeline. 
+
+![image](workflow.jpeg)
 
 ## Modules
 
